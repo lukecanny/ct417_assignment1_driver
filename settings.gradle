@@ -6,6 +6,12 @@
  * Detailed information about configuring a multi-project build in Gradle can be found
  * in the user manual at https://docs.gradle.org/7.5.1/userguide/multi_project_builds.html
  */
-
+/*dependencyResolutionManagement {
+	repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+	repositories{
+		mavenCentral()
+		maven{ url "https://jitpack.io" }
+	}
+}*/
 rootProject.name = 'assignment1_ct417_driver'
 include('lib')
