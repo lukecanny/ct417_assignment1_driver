@@ -42,12 +42,7 @@ public class Database {
 	Student stu5 = new Student("Jane Carl", new LocalDate(1999,11, 30));
 	Student stu6 = new Student("Cristiano Ronaldo", new LocalDate(1990, 1,30));
 	
-	stu1.enroll(fishing);
-	stu2.enroll(fishing);
-	stu3.enroll(computerScience);
-	stu4.enroll(computerScience);
-	stu5.enroll(engineeringCourse);
-	stu6.enroll(engineeringCourse);
+
 	
 	
 	// List of Students
@@ -63,6 +58,12 @@ public class Database {
 	Scanner scan = new Scanner(System.in);
 	
 	Database() {
+		stu1.enroll(fishingCourse);
+		stu2.enroll(fishingCourse);
+		stu3.enroll(computerScience);
+		stu4.enroll(computerScience);
+		stu5.enroll(engineeringCourse);
+		stu6.enroll(engineeringCourse);
 //		engineeringCourse.addStudent(stu1);
 //		fishingCourse.addStudent(stu2);
 //		computerScience.addStudent(stu3);
