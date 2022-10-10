@@ -30,7 +30,7 @@ dependencies {
     implementation 'com.google.guava:guava:31.0.1-jre'
 
 	// Adding Part (A) as a dependency
-	implementation 'com.github.lukecanny:ct417_assignment1:v0.5'
+	implementation 'com.github.lukecanny:ct417_assignment1:v0.7'
 }
 
 tasks.named('test') {
