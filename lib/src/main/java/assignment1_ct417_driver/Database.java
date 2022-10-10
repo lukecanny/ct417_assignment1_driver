@@ -35,12 +35,20 @@ public class Database {
 			new LocalDate(2019, 9, 12), new LocalDate(2023, 7,1));
 	
 	// Creating Students
-	Student stu1 = new Student("Jack Daniel", new LocalDate(2001, 10,10), "ECE");
-	Student stu2 = new Student("James Bond", new LocalDate(1980, 6,1), "FSH");
-	Student stu3 = new Student("Bob Ross", new LocalDate(1972, 12,19), "CS");
-	Student stu4 = new Student("Michelle Doe", new LocalDate(2000,1,1), "ECE");
-	Student stu5 = new Student("Jane Carl", new LocalDate(1999,11, 30), "CS");
-	Student stu6 = new Student("Cristiano Ronaldo", new LocalDate(1990, 1,30), "FSH");
+	Student stu1 = new Student("Jack Daniel", new LocalDate(2001, 10,10));
+	Student stu2 = new Student("James Bond", new LocalDate(1980, 6,1));
+	Student stu3 = new Student("Bob Ross", new LocalDate(1972, 12,19));
+	Student stu4 = new Student("Michelle Doe", new LocalDate(2000,1,1));
+	Student stu5 = new Student("Jane Carl", new LocalDate(1999,11, 30));
+	Student stu6 = new Student("Cristiano Ronaldo", new LocalDate(1990, 1,30));
+	
+	stu1.enroll(fishing);
+	stu2.enroll(fishing);
+	stu3.enroll(computerScience);
+	stu4.enroll(computerScience);
+	stu5.enroll(engineeringCourse);
+	stu6.enroll(engineeringCourse);
+	
 	
 	// List of Students
 	ArrayList<Student> allStudents = new ArrayList<Student>(Arrays.asList(stu1, stu2,stu3,stu4,stu5,stu6));
@@ -55,25 +63,25 @@ public class Database {
 	Scanner scan = new Scanner(System.in);
 	
 	Database() {
-		engineeringCourse.addStudent(stu1);
-		fishingCourse.addStudent(stu2);
-		computerScience.addStudent(stu3);
-		engineeringCourse.addStudent(stu4);
-		computerScience.addStudent(stu5);
-		fishingCourse.addStudent(stu6);
-		
-		software.addCourse(engineeringCourse);
-		beams.addCourse(engineeringCourse);
-		realtimesystems.addCourse(engineeringCourse);
-		
-		software.addCourse(computerScience);
-		learning.addCourse(computerScience);
-		professionalskills.addCourse(computerScience);
-		
-		fishing.addCourse(fishingCourse);
-		professionalskills.addCourse(fishingCourse);
-		int i = beams.addCourse(fishingCourse);
-		System.out.println(i);
+//		engineeringCourse.addStudent(stu1);
+//		fishingCourse.addStudent(stu2);
+//		computerScience.addStudent(stu3);
+//		engineeringCourse.addStudent(stu4);
+//		computerScience.addStudent(stu5);
+//		fishingCourse.addStudent(stu6);
+//		
+//		software.addCourse(engineeringCourse);
+//		beams.addCourse(engineeringCourse);
+//		realtimesystems.addCourse(engineeringCourse);
+//		
+//		software.addCourse(computerScience);
+//		learning.addCourse(computerScience);
+//		professionalskills.addCourse(computerScience);
+//		
+//		fishing.addCourse(fishingCourse);
+//		professionalskills.addCourse(fishingCourse);
+//		int i = beams.addCourse(fishingCourse);
+//		System.out.println(i);
 
 		
 	}
@@ -113,7 +121,7 @@ public class Database {
 	
 	private void viewList(ArrayList<?> list) {
 		for (int i = 1; i < list.size()+1; i++) {
-			System.out.println(i + ") "+ ((UniversityElement) list.get(i-1)));
+			System.out.println(i + ") "+ ((UniversityElement) list.get(i-1)).getName());
 		}
 		
 		System.out.println("Select an item for more options or press enter to return");
