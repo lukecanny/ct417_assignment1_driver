@@ -32,6 +32,10 @@ dependencies {
 
 	// Adding Part (A) as a dependency
 	implementation 'com.github.lukecanny:ct417_assignment1:v0.7'
+	
+	// Joda-Time library used for dealing with time.
+	// https://mvnrepository.com/artifact/org.terasoluna.gfw/terasoluna-gfw-jodatime
+	implementation group: 'org.terasoluna.gfw', name: 'terasoluna-gfw-jodatime', version: '5.7.1.SP1.RELEASE'
 }
 
 tasks.named('test') {
